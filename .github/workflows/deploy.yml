@@ -1,4 +1,4 @@
-name: Deploy VitePress
+name: Deploy VitePress to GitHub Pages
 
 on:
   push:
@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  # 这个目前没问题，不用改
+        uses: actions/checkout@v4
 
-      - name: Set Node.js 24 (fix warning)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -32,6 +32,9 @@ jobs:
 
       - name: Build VitePress
         run: npm run docs:build
+        
+      - name: Rename dist to _site
+        run: mv docs/.vitepress/dist _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
