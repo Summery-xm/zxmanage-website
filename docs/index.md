@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: github下载
-      link: https://github.com/Summery-xm/ZXManage-download/releases/download/v1.0.0/ZXMange-1.0.0-x64-Setup.exe
+      link: https://github.com/Summery-xm/zxmanage/releases/download/v1.0.0/ZXManage-1.0.0-x64-Setup.exe
     - theme: brand
       text: 夸克网盘下载
-      link: https://pan.quark.cn/s/c355a409ab06#/list/share
+      link: https://pan.quark.cn/s/ca9e7aa9c0ae
     - theme: alt
       text: 使用文档
       link: http://localhost:8002/zxmanage/document/
