@@ -7,9 +7,12 @@ export default defineConfig({
   description: 'ZXManager 是一款基于 Electron+React 开发的桌面端项目管理软件。支持 Vue, React, Java, 小程序, Node.js 等多语言项目的可视化管理和一键打包部署，内置 Git 管理与 Nginx 本地部署功能。',
   lang:'zh-CN',
   base:'/zxmanage/',
-  
 
-
+  vite:{
+    server:{
+      port:8002
+    }
+  },
 
   // --- 最后更新时间 (SEO 加分项) ---
   lastUpdated: true,
@@ -30,7 +33,7 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: 'ZXManager - 全能桌面端项目管理工具' }],
     ['meta', { property: 'og:description', content: '支持Vue/React/Java等多语言项目管理，集成Git管理、代码打包与Nginx本地部署，开发者的得力助手。' }],
     ['meta', { property: 'og:image', content: '/og-image.png' }], // 务必在 public 文件夹放一张 1200x630 的预览图
-    ['meta', { property: 'og:url', content: 'https://your-domain.com' }], // 替换为你的正式域名
+    ['meta', { property: 'og:url', content: 'https://summery-xm.github.io/zxmanage/' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
 
     // 4. Twitter 卡片 (如果做海外推广)
@@ -53,7 +56,7 @@ export default defineConfig({
         "priceCurrency": "CNY"
       },
       "description": "一款支持Vue、React、Java等技术的桌面端项目管理工具，提供Git可视化管理与Nginx本地部署功能。",
-      "softwareVersion": "1.2.0"
+      "softwareVersion": "1.0.0"
     })]
   ],
   themeConfig: {
@@ -65,6 +68,7 @@ export default defineConfig({
       { text: '更新日志', link: '/updateLog' },
       { text: '开发计划', link: '/plan' },
       { text: '下载软件', link: 'https://github.com/Summery-xm/ZXManage-download/releases/download/v1.0.0/ZXMange-1.0.0-x64-Setup.exe' },
+      { text: '联系我们', link: 'https://qm.qq.com/q/7A3qlIPxCw'}
     ],
     sidebar: {
       '/document/':[
@@ -103,7 +107,7 @@ export default defineConfig({
     }
   },
   sitemap: {
-    hostname: 'https://your-domain.com' , // 必须替换为你的真实域名
+    hostname: 'https://summery-xm.github.io/zxmanage/' ,
     lastmodDateOnly: false
   },
   cleanUrls: true,
